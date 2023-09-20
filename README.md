@@ -151,3 +151,25 @@ gp env HELL=`world`
 All future launched will set the env vars for all bash terminals oepened the workspaces.
 
 I can also set en vars in `.gitpod.yml` but this can only contain non sensitive env vars.
+
+#### AWS CLI installation
+
+AWS CLI is installed for the project via the bash script ['./bin/install_aws_cli'](./bin/install_aws_cli)
+
+[Getting started this is the reference ](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+
+If i want to check if my AWS credentials is configured correctly ,I will need to run the following AWS CLI command 
+```sh
+aws sts get-caller-identity
+```
+You get a successful json payload return that looks like this.
+
+```json
+{
+    "UserId": "AIDAQMAWHMSRISCrtFWO5",
+    "Account": "02346367353eehh",
+    "Arn": "arn:aws:iam::025883534470:user/Clive-terraform-bootcamp"
+}
+```
+
+I needed to generate AWS CLI credits from IAM user in order for the user AWS CLI
