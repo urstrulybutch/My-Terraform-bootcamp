@@ -178,3 +178,64 @@ I used
 ``` git tag (tag no) to tag my branch
 
 i also used 'git push --tags' to push the tags
+
+## Terraform Basics
+
+#### Terraform  Registry
+
+Terraform sources their providers and modules from the terraform registry which loacted at [registry.terraform.io](https:registry.terraform.io)
+
+- providers is an interface to APIs that will allow to create resourses in terraform.
+
+- **modules** are a way to make large amount of terraform code modular, protable and sharable.
+
+[random terraform providers]https://registry.terraform.io/browse/providers
+
+### Terrafrom console 
+
+We can see a list of all the terraform commanads by simply typing 'terraform'
+
+#### Terraform init
+
+At the start of a new terraform project we will run 'terraform init' to download the binaries for the terraform providers that i used in this project
+
+
+#### Terraform plan 
+
+This will generate out a change set about the state of the infastucture and what will be changed
+
+We can output this change set ie. "plan" to be passed to an apply, but often you can just ignore outputting.
+
+#### Terraform Apply
+
+'terraform apply'
+
+This will run a plan and pass the change set to be executed by terraform  apply should prompt yes or no.
+
+If we want to automaically approve an apply we can provide the auto approve flag eg. `terraform apply --auto approve`
+
+### Terraform lock files
+
+`.terraform.lock.hcl` contains the locked versioning for the providers or modules that should be used with this project.
+
+The Terraform lock file should be committed to your version control system (VSC)
+eg. Github.
+
+### Terraform state files
+
+`.terraform .tfstate` contain information about the current state of your infastructure
+
+this file **should not be commited** to your VCS.
+
+This file can contain sensentive data.
+
+if you lose this file ,you lose knowing the state file .
+
+#### Terraform Directory
+
+`.terraform ` directory contains binaries of terraform providers.
+
+
+
+
+
