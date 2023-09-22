@@ -173,3 +173,8 @@ You get a successful json payload return that looks like this.
 ```
 
 I needed to generate AWS CLI credits from IAM user in order for the user AWS CLI
+
+I used 
+``` git tag (tag no) to tag my branch
+
+i also used 'git push --tags' to push the tags
