@@ -235,7 +235,8 @@ if you lose this file ,you lose knowing the state file .
 
 `.terraform ` directory contains binaries of terraform providers.
 
-
+####  Terraform destroy 
+`terraform destroy` This is will destroy the bucket in the aws console
 
 
 
